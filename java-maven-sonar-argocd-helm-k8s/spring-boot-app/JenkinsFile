@@ -3,7 +3,7 @@ pipeline {
   environment {
     registryCredential = 'dockerhubcred'   // Credential ID in Jenkins
     imageName = 'jenkins_my-docker-image'   // Image name (be sure this matches your Docker Hub repo)
-    imageTag = 'demo'                    // Image tag
+    imageTag = 'latest'                    // Image tag
     dockerHubRepo = 'pawbabe'    // Your Docker Hub username
   }
   stages {
