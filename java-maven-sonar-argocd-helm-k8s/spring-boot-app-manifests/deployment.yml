@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spring-boot-app
-  namespace: npci
+  namespace: latest
   labels:
     app: spring-boot-app
 spec:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: pawbabe/jenkins_my-docker-image:npci
+        image: pawbabe/jenkins_my-docker-image:latest
         ports:
         - containerPort: 8080
