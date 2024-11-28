@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: pawbabe/jenkins_my-docker-image:latest
+        image: pawbabe/jenkins_my-docker-image:npci
         ports:
         - containerPort: 8080
