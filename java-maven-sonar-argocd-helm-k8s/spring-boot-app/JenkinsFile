@@ -1,10 +1,11 @@
 pipeline {
   agent any
   environment {
-    registryCredential = 'dockerhubcred'   // Credential ID in Jenkins
-    imageName = 'jenkins_my-docker-image'   // Image name (be sure this matches your Docker Hub repo)
-    imageTag = 'npci'                    // Image tag
-    dockerHubRepo = 'pawbabe'    // Your Docker Hub username
+    DOCKER_IMAGE_NAME = 'your-app-name'
+        DOCKER_IMAGE_TAG = "${env.BUILD_NUMBER}"
+        NEXUS_REGISTRY_URL = 'http://your-nexus-repository-url:port'
+        NEXUS_REPOSITORY = 'your-docker-repository-name'
+        NEXUS_CREDENTIALS = credentials('nexus-credentials')
   }
   stages {
       stage('Checkout') {
